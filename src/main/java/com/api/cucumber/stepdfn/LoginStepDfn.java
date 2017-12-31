@@ -23,10 +23,18 @@ public class LoginStepDfn {
 			}
 		}*/
 		
-		Map<String, String>  data =  table.asMap(String.class, String.class);
-		for (String key : data.keySet()) {
-			System.out.println(String.format("Keys : %s , Value : %s", key,data.get(key)));
+		/*Map<String, String> data = table.asMap(String.class, String.class);
+		
+		for(String key : data.keySet()){
+			System.out.println(String.format("Key : %s , Value : %s", key,data.get(key)));
+		}*/
+		
+		List<String> dataList = table.asList(String.class);
+		
+		for(String key : dataList){
+			System.out.println(String.format("Value : %s", key));
 		}
+		
 	}
 
 	@Then("^User should be able to login with correct username and password$")
