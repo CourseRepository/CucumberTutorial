@@ -40,5 +40,22 @@ public class LoginStepDfn {
 	@Then("^User should be able to login with correct username and password$")
 	public void user_should_be_able_to_login_with_correct_username_and_password() throws Throwable {
 	}
+	
+	
+	@Given("^a precondition has value \"([^\"]*)\"$")
+	public void a_precondition_has_value(String arg1) throws Throwable {
+	   System.out.println(String.format("Value : %s", arg1));
+	}
+
+	@Given("^something with \"([^\"]*)\"$")
+	public void something_with(String arg1) throws Throwable {
+		 System.out.println(String.format("Value : %s", arg1));
+	}
+
+	@Then("^check \"([^\"]*)\" is the output$")
+	public void check_is_the_output(String arg1) throws Throwable {
+		 System.out.println(String.format("Value : %s", arg1));
+	}
+	
 
 }
