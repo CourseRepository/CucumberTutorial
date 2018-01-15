@@ -1,10 +1,11 @@
 package com.api.cucumber.stepdfn;
 
 import java.util.List;
-import java.util.Map;
+
+import com.api.cucumber.transform.ExcelDataToDataTable;
 
 import cucumber.api.DataTable;
-import cucumber.api.PendingException;
+import cucumber.api.Transform;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -36,6 +37,19 @@ public class LoginStepDfn {
 		}
 		
 	}
+	
+	@When("^User login with the following username and password with data in excel at \"([^\"]*)\"$")
+	public void user_login_with_the_following_username_and_password_with_data_in_excel_at(@Transform(ExcelDataToDataTable.class) DataTable table) throws Throwable {
+		System.out.println(table.toString());
+		
+		List<String> dataList = table.asList(String.class);
+		
+		for(String str : dataList){
+			System.out.println(str);
+		}
+		
+	}
+	
 
 	@Then("^User should be able to login with correct username and password$")
 	public void user_should_be_able_to_login_with_correct_username_and_password() throws Throwable {
