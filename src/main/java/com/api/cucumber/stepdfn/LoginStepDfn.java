@@ -11,6 +11,7 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class LoginStepDfn {
+	
 	@Given("^User is at the login page of the application$")
 	public void user_is_at_the_login_page_of_the_application() throws Throwable {
 	}
