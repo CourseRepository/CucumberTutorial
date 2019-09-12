@@ -1,4 +1,4 @@
-# Automation Testing using Selenium & Katalon Studio [CucumberTutorial-io]
+# Cucumber Framework with Selenium Webdriver and Java 
 
 Learn Behavior-driven development with Java and Webdriver from scratch 
 
